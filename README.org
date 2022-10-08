@@ -1,0 +1,2 @@
+* Interfejsy platform mobilnych
+Repozytorium potrzebne do przedmiotu.
