@@ -56,11 +56,29 @@
              width: 15rem;
              height: 1.4rem;
          }
-         input:invalid {
-             border-color: red;
+
+         input + span {
+             position: relative;
          }
-         input:valid {
-             border-color: green;
+
+         input + span::before {
+             position: absolute;
+             right: -20px;
+             top: -20px;
+         }
+
+         input:invalid {
+             border: 2px solid red;
+         }
+
+         input:invalid + span::before {
+             content: "✖";
+             color: red;
+         }
+
+         input:valid + span::before {
+             content: "✓";
+             color: green;
          }
         </style>
 
@@ -104,16 +122,19 @@
                 <!-- 1)  adres email -->
                 <label for="email">email</label>
                 <input type="email" name="email" placeholder="john@domain.edu" pattern="\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}"/>
+                <span></span>
             </div>
             <div>
                 <!-- 2)  kod pocztowy -->
                 <label for="kodPocztowy">kod pocztowy</label>
                 <input type="text" name="kodPocztowy" placeholder="99-333" pattern="\d\d-\d\d\d" />
+                <span></span>
             </div>
             <div>
                 <!-- 3)  numer nip (z kreskami) -->
                 <label for="numerNip">numer NIP</label>
                 <input type="text" name="numerNip" placeholder="999-888-11-22" pattern="\d\d\d-\d\d\d-\d\d-\d\d" />
+                <span></span>
             </div>
             <div>
                 <!-- 4)  numer dowodu -->
