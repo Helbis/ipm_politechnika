@@ -15,53 +15,71 @@
     <body>
         <form method="" id="" action="">
             <!--
-                 1) adres email
-                 2) kod pocztowy
-                 3) numer nip (z kreskami)
-                 4) numer dowodu
-                 5) adres ipv4
-                 6) strona www
+                 Proszę przesłać plik html i wszystkie zależności w archiwum zip.
+                 Równocześnie projekt musi się znajdować na githubie z odpowiednią nazwą katalogu
+                 (z tytułu zadania w nawiasach - ta część która jest w nawiasach z tytułu zadania(np "labX")).
+                 W tym katalogu (na repo github) musi się znajdować plik indeks.html z rezultatem Państwa prac.
+                 W pierwszej linii pola tekstowego na wikamp proszę wpisać słowo "html", które ma być KLIKALNYM
+                 linkiem do pliku HTML na githubie w postaci github pages (tak by można było od razu "odpalić" projekt na github.io).
+                 Obok ma się znajdować słowo "kod", które ma być klikalnym linkiem do projektu na githubie.
+                 Oprócz tego w polu tekstowym proszę opisać ile procent (mniej więcej) zadania udało się Państwu
+                 zrealizować i co było dla Państwa najtrudniejsze (nawet jeśli wykonali Państwo całość zadania).
+
+                 TREŚĆ:
+                 Proszę przygotować stronę internetową na której znajdować się będą polatekstowe (każde w oddzielnej linii)
+                 sprawdzające poprawność wpisania danych wymienionych poniżej.
+                 Do każdego pola ma być dodany placeholder z przykładowymi poprawnymi danymi.
+                 Uwaga w celu zapewnienie maksymalnej kompatybilności pomiędzy przeglądarkami proszę wykorzystać
+                 CSS do ustawienia zielonego koloru obramówki pól wypełnionych poprawnie i czerwonego dla wypełnionych niepoprawnie.
+                 Wszystkie podpunkty mają być zrealizowanie przy wykorzystaniu standardowych opcji HTML5, CSS 3 i JavaScript.
+
+                 1)  adres email
+                 2)  kod pocztowy
+                 3)  numer nip (z kreskami)
+                 4)  numer dowodu
+                 5)  adres ipv4
+                 6)  strona www
                  7a) ścieżka litera dysku:\katalog systemu (windows, winnt, win, dos, msdos)\katalog podrzędny (np. C:\windows\temp lub d:\msdos).
                  7b) to samo, co w 7a, ale ma pozwalać na użycie zarówno dużych, jak i małych liter (Windows,windows,WinDowS)
-                 8) ścieżka do pliku w katalogu /etc/ (np. /etc/passwd, /etc/hosts, itp)
-                 9) adres ipv6
+                 8)  ścieżka do pliku w katalogu /etc/ (np. /etc/passwd, /etc/hosts, itp)
+                 9)  adres ipv6
                  10) Numer telefonu
             -->
             <div>
-                <p>email</p>
-                <input type="text" name="email" value="" />
+                <label>email</label>
+                <input type="email" name="email" value="" />
             </div>
             <div>
-                <p>kod pocztowy</p>
-                <input type="text" name="kodPocztowy" value="" />
+                <label>kod pocztowy</label>
+                <input type="number" name="kodPocztowy" value="" />
             </div>
             <div>
-                <p>numer NIP</p>
-                <input type="text" name="numerNip" value="" />
+                <label>numer NIP</label>
+                <input type="number" name="numerNip" value="" />
             </div>
             <div>
-                <p>numer dowodu</p>
+                <label>numer dowodu</label>
                 <input type="text" name="numerDowodu" value="" />
             </div>
             <div>
-                <p>adres IPV4</p>
+                <label>adres IPV4</label>
                 <input type="text" name="adresIPV4" value="" />
             </div>
             <div>
-                <p>strona WWW</p>
-                <input type="text" name="stronaWWW" value="" />
+                <label>strona WWW</label>
+                <input type="url" name="stronaWWW" value="" />
             </div>
             <div>
-                <p>Ścieżka do pliku</p>
+                <label>Ścieżka do pliku</label>
                 <input type="file" name="ścieżkaPlik" value="" />
             </div>
             <div>
-                <p>adres IPV6</p>
+                <label>adres IPV6</label>
                 <input type="text" name="adresIPV6" value="" />
             </div>
             <div>
-                <p>numer telefonu</p>
-                <input type="number" name="numerTelefonu" value="" />
+                <label>numer telefonu</label>
+                <input type="tel" name="numerTelefonu" value="" />
             </div>
         </form>
     </body>
