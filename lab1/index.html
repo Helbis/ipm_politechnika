@@ -47,19 +47,19 @@
             -->
             <div>
                 <label for="email">email</label>
-                <input type="email" name="email" placeholder="hello" />
+                <input type="email" name="email" placeholder="john@domain.edu" />
             </div>
             <div>
                 <label for="kodPocztowy">kod pocztowy</label>
-                <input type="number" name="kodPocztowy" placeholder="" />
+                <input type="number" name="kodPocztowy" placeholder="99-333" pattern="\d\d-\d\d\d" />
             </div>
             <div>
                 <label for="numerNip">numer NIP</label>
-                <input type="number" name="numerNip" placeholder="" />
+                <input type="number" name="numerNip" placeholder="" pattern="\d\d\d-\d\d\d-\d\d-\d\d" />
             </div>
             <div>
                 <label for="numerDowodu">numer dowodu</label>
-                <input type="text" name="numerDowodu" placeholder="" />
+                <input type="text" name="numerDowodu" placeholder="" pattern="[a-zA-Z][a-zA-Z][a-zA-Z]\d\d\d\d\d\d"/>
             </div>
             <div>
                 <label for="adresIPV4">adres IPV4</label>
@@ -67,7 +67,7 @@
             </div>
             <div>
                 <label for="stronaWWW">strona WWW</label>
-                <input type="url" name="stronaWWW" placeholder="" />
+                <input type="url" name="stronaWWW" placeholder="duck.com" pattern="^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$"/>
             </div>
             <div>
                 <label for="ścieżkaPlik">Ścieżka do pliku</label>
