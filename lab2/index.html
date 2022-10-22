@@ -10,7 +10,7 @@
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-
+        <!-- <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen" /> -->
 
     </head>
     <body>
@@ -65,6 +65,14 @@
             <div>
                 <label for="numerTelefonu">numer telefonu</label>
                 <input type="tel" name="numerTelefonu" placeholder="123 456 789" pattern="\d\d\d[-|\ ]?\d\d\d[-\ ]?\d\d\d"/>
+            </div>
+            <div>
+                <label for="kalendarz">kalendarz</label>
+                <input type="date" name="kalendarz"/>
+            </div>
+            <div>
+                <label for="kalendarzLimit">kalendarz (pn-pt)</label>
+                <input type="date" name="kalendarzLimit" min="2022-10-17" max="2022-10-21" />
             </div>
         </form>
     </body>
