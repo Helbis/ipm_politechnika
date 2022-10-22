@@ -74,6 +74,19 @@
                 <label for="kalendarzLimit">kalendarz (pn-pt)</label>
                 <input type="date" name="kalendarzLimit" min="2022-10-17" max="2022-10-21" />
             </div>
+            <div>
+                <label for="time12h">czas (12h)</label>
+                <input type="time" name="time12h" min="4:00"/>
+
+                <select id="time_AM_PM" name="switch_AM_PM">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+            <div>
+                <label for="time24h">czas (24h)</label>
+                <input type="time" name="time24h" />
+            </div>
         </form>
     </body>
 </html>
