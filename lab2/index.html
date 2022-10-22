@@ -11,14 +11,12 @@
         <!-- Place favicon.ico in the root directory -->
 
         <!-- <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen" /> -->
+        <script type="text/javascript" href="./js/main.js"></script>
 
     </head>
     <body>
         <h1>Input form for IPM classes</h1>
         <form>
-            <!--
-
-            -->
             <div>
                 <label for="email">email</label>
                 <input type="email" name="email" placeholder="john@domain.edu" pattern="\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}"/>
@@ -76,7 +74,7 @@
             </div>
             <div>
                 <label for="time12h">czas (12h)</label>
-                <input type="time" name="time12h" min="4:00"/>
+                <input type="time" name="time12h" min="01:00" max="12:59" id="time12h" />
 
                 <select id="time_AM_PM" name="switch_AM_PM">
                     <option value="AM">AM</option>
@@ -86,6 +84,10 @@
             <div>
                 <label for="time24h">czas (24h)</label>
                 <input type="time" name="time24h" />
+            </div>
+            <div>
+                <label for="colorPicker">kolor</label>
+                <input type="color" name="colorPicker" />
             </div>
         </form>
     </body>
