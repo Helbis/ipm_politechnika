@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IPM 249087 - lab1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <style type="text/css" media="screen">
+         body {
+             display: flex;
+             flex-direction: column;
+             background-color: lightgrey;
+
+             font-family: sans-serif;
+         }
+
+         h1 {
+             margin: 2rem auto;
+         }
+
+         div {
+             display: flex;
+             flex-direction: column;
+
+             border-radius: 5px;
+         }
+         div:hover, div:active {
+             background-color: grey;
+         }
+
+         form {
+             display: grid;
+             text-align: center;
+             gap: 2ch;
+
+             margin: auto;
+             max-width: 80ch;
+         }
+
+         form > * {
+             margin: auto;
+         }
+
+         form > * > * {
+             max-width: 30ch;
+             min-width: 20ch;
+         }
+
+         input {
+             border-radius: 5px;
+             width: 15rem;
+             height: 1.4rem;
+         }
+
+         input + span {
+             position: relative;
+         }
+
+         input + span::before {
+             position: absolute;
+             right: -20px;
+             top: -20px;
+         }
+
+         input:invalid {
+             border: 2px solid red;
+         }
+
+         input:invalid + span::before {
+             content: "✖";
+             color: red;
+         }
+
+         input:valid + span::before {
+             content: "✓";
+             color: green;
+         }
+        </style>
+
+
+    </head>
+    <body>
+        <h1>Input form for IPM classes</h1>
+        <form>
+            <!--
+                 Proszę przesłać plik html i wszystkie zależności w archiwum zip.
+                 Równocześnie projekt musi się znajdować na githubie z odpowiednią nazwą katalogu
+                 (z tytułu zadania w nawiasach - ta część która jest w nawiasach z tytułu zadania(np "labX")).
+                 W tym katalogu (na repo github) musi się znajdować plik indeks.html z rezultatem Państwa prac.
+                 W pierwszej linii pola tekstowego na wikamp proszę wpisać słowo "html", które ma być KLIKALNYM
+                 linkiem do pliku HTML na githubie w postaci github pages (tak by można było od razu "odpalić" projekt na github.io).
+                 Obok ma się znajdować słowo "kod", które ma być klikalnym linkiem do projektu na githubie.
+                 Oprócz tego w polu tekstowym proszę opisać ile procent (mniej więcej) zadania udało się Państwu
+                 zrealizować i co było dla Państwa najtrudniejsze (nawet jeśli wykonali Państwo całość zadania).
+
+                 TREŚĆ:
+                 Proszę przygotować stronę internetową na której znajdować się będą polatekstowe (każde w oddzielnej linii)
+                 sprawdzające poprawność wpisania danych wymienionych poniżej.
+                 Do każdego pola ma być dodany placeholder z przykładowymi poprawnymi danymi.
+                 Uwaga w celu zapewnienie maksymalnej kompatybilności pomiędzy przeglądarkami proszę wykorzystać
+                 CSS do ustawienia zielonego koloru obramówki pól wypełnionych poprawnie i czerwonego dla wypełnionych niepoprawnie.
+                 Wszystkie podpunkty mają być zrealizowanie przy wykorzystaniu standardowych opcji HTML5, CSS 3 i JavaScript.
+
+                 1)  adres email
+                 2)  kod pocztowy
+                 3)  numer nip (z kreskami)
+                 4)  numer dowodu
+                 5)  adres ipv4
+                 6)  strona www
+                 7a) ścieżka litera dysku:\katalog systemu (windows, winnt, win, dos, msdos)\katalog podrzędny (np. C:\windows\temp lub d:\msdos).
+                 7b) to samo, co w 7a, ale ma pozwalać na użycie zarówno dużych, jak i małych liter (Windows,windows,WinDowS)
+                 8)  ścieżka do pliku w katalogu /etc/ (np. /etc/passwd, /etc/hosts, itp)
+                 9)  adres ipv6
+                 10) Numer telefonu
+            -->
+            <div>
+                <!-- 1)  adres email -->
+                <label for="email">email</label>
+                <input type="email" name="email" placeholder="john@domain.edu" pattern="\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}"/>
+                <span></span>
+            </div>
+            <div>
+                <!-- 2)  kod pocztowy -->
+                <label for="kodPocztowy">kod pocztowy</label>
+                <input type="text" name="kodPocztowy" placeholder="99-333" pattern="\d\d-\d\d\d" />
+                <span></span>
+            </div>
+            <div>
+                <!-- 3)  numer nip (z kreskami) -->
+                <label for="numerNip">numer NIP</label>
+                <input type="text" name="numerNip" placeholder="999-888-11-22" pattern="\d\d\d-\d\d\d-\d\d-\d\d" />
+                <span></span>
+            </div>
+            <div>
+                <!-- 4)  numer dowodu -->
+                <label for="numerDowodu">numer dowodu</label>
+                <input type="text" name="numerDowodu" placeholder="DAT345123" pattern="[a-zA-Z][a-zA-Z][a-zA-Z]\d\d\d\d\d\d"/>
+            </div>
+            <div>
+                <!-- 5)  adres ipv4 -->
+                <label for="adresIPV4">adres IPV4</label>
+                <input type="text" name="adresIPV4" pattern="(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0- 9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])" placeholder="255.255.126.08" />
+            </div>
+            <div>
+                <!-- 6)  strona www -->
+                <label for="stronaWWW">strona WWW</label>
+                <input type="url" name="stronaWWW" placeholder="duck.com" pattern="^((https?|ftp|smtp):\/\/)?(www\.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$"/>
+            </div>
+            <div>
+                <!-- 7a) ścieżka litera dysku:\katalog systemu (windows, winnt, win, dos, msdos)\katalog podrzędny (np. C:\windows\temp lub d:\msdos). -->
+                <label for="literaDysku1">Litera dysku</label>
+                <input type="text" name="literaDysku1" placeholder="C:\win\hello" pattern="[a-zA-Z]\:\\[a-z]+\\[a-z]+"/>
+            </div>
+            <div>
+                <!-- 7b) to samo, co w 7a, ale ma pozwalać na użycie zarówno dużych, jak i małych liter (Windows,windows,WinDowS) -->
+                <label for="literaDysku2">Litera dysku</label>
+                <input type="text" name="literaDysku2" placeholder="C:\Windows\MacOS" pattern="[a-zA-Z]\:\\[a-zA-Z]+\\[a-zA-Z]+"/>
+            </div>
+            <div>
+                <!-- 8)  ścieżka do pliku w katalogu /etc/ (np. /etc/passwd, /etc/hosts, itp) -->
+                <label for="ścieżkaPlik">Ścieżka do pliku</label>
+                <input type="file" name="ścieżkaPlik" placeholder="" />
+            </div>
+            <div>
+                <!-- 9)  adres ipv6 -->
+                <label for="adresIPV6">adres IPV6</label>
+                <input type="text" name="adresIPV6" pattern="((([0-9a-fA-F]){1,4})\:){7}([0-9a-fA-F]){1,4}" placeholder="2001:0db8:85a3:0000:0000:8a2e:0370:7334" />
+            </div>
+            <div>
+                <!-- 10) Numer telefon -->
+                <label for="numerTelefonu">numer telefonu</label>
+                <input type="tel" name="numerTelefonu" placeholder="123 456 789" pattern="\d\d\d[-|\ ]?\d\d\d[-\ ]?\d\d\d"/>
+            </div>
+        </form>
+    </body>
+</html>
