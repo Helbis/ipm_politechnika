@@ -3,30 +3,55 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>IPM 249087 - lab2</title>
+        <title>IPM 249087 - lab3</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen" />
+        <!-- <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen" /> -->
         <script type="text/javascript" href="./js/main.js"></script>
 
     </head>
     <body>
         <!--
              1) Proszę przygotować edytowalną listę (ol) oraz możliwość zmiany kolejności elementów na liście z wykorzystaniem drag&drop.
-             2) Proszę opracować stronę na której 80% powierzchni zajmować będzie platforma,
-                   a na pozostałych 20% będzie guzik "Generuj klocek"
+                   Lista ma zajmować 30% ekranu (w poziomie)
+             2) Proszę opracować stronę na której 80% (w pionie) powierzchni zajmować będzie platforma,
+                   a na pozostałych 20% (w pionie) będzie guzik "Generuj klocek"
                    i miejsce gdzie będzie się pojawiał klocek z o losowym kolorze.
-                   Następnie z wykorzystaniem Drag&Drop użytkownik będzie mógł przenieść klocek na platformie
-                   i umieścić na innym klocku (à la tetris, ale nie muszą być "w jednej linii").
+                   Następnie z wykorzystaniem Drag&Drop użytkownik będzie mógł przenieść
+                   klocek na platformie i umieścić na innym klocku
+                   (à la tetris, ale nie muszą być "w jednej linii").
                    Oczywiście klocki fizycznie nie mogą na siebie "nachodzić" (tak jak w tetrisie).
+                   Cały ten punkt ma zajmować 70% ekranu w poziomie.
         -->
 
+<script>
+function allowDrop(ev) {
+     ev.preventDefault();
+}
+
+function drag(ev) {
+     ev.dataTransfer.setData("text/plain", ev.target.id);
+}
+
+function drop(ev) {
+     ev.preventDefault();
+     let data = ev.dataTransfer.getData("text/plain");
+     console.log("LOG")
+     console.log(data.innerHTML)
+     ev.target.appendChild(document.getElementById(data));
+
+     //ev.target.innerHTML = document.getElementById(data);
+}
+</script>
+
         <ol>
-            <li><input type="text" value="" /></li>
+            <li id="1" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"><p>world 1</p></li>
+            <li id="2" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"><p>world 2</p></li>
+            <li id="3" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"><p>world 3</p></li>
         </ol>
 
     </body>
