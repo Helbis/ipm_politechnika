@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IPM 249087 - lab2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen" />
+        <script type="text/javascript" href="./js/main.js"></script>
+
+    </head>
+    <body>
+        <h1>Input form for IPM classes</h1>
+        <form>
+            <div>
+                <label for="email">email</label>
+                <input type="email" name="email" placeholder="john@domain.edu" pattern="\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}"/>
+                <span></span>
+            </div>
+            <div>
+                <label for="kodPocztowy">kod pocztowy</label>
+                <input type="text" name="kodPocztowy" placeholder="99-333" pattern="\d\d-\d\d\d" />
+                <span></span>
+            </div>
+            <div>
+                <label for="numerNip">numer NIP</label>
+                <input type="text" name="numerNip" placeholder="999-888-11-22" pattern="\d\d\d-\d\d\d-\d\d-\d\d" />
+                <span></span>
+            </div>
+            <div>
+                <label for="numerDowodu">numer dowodu</label>
+                <input type="text" name="numerDowodu" placeholder="DAT345123" pattern="[a-zA-Z][a-zA-Z][a-zA-Z]\d\d\d\d\d\d"/>
+            </div>
+            <div>
+                <label for="adresIPV4">adres IPV4</label>
+                <input type="text" name="adresIPV4" pattern="^((25[0-5]|(2[0-4]|1[0-9]|[1-9]|)[0-9])(\.(?!$)|$)){4}$" placeholder="255.255.126.08" />
+            </div>
+            <div>
+                <label for="stronaWWW">strona WWW</label>
+                <input type="url" name="stronaWWW" placeholder="duck.com" pattern="^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$"/>
+            </div>
+            <div>
+                <label for="literaDysku1">Litera dysku</label>
+                <input type="text" name="literaDysku1" placeholder="C:\win\hello" pattern="[a-zA-Z]\:\\[a-z]+\\[a-z]+"/>
+            </div>
+            <div>
+                <label for="literaDysku2">Litera dysku</label>
+                <input type="text" name="literaDysku2" placeholder="C:\Windows\MacOS" pattern="[a-zA-Z]\:\\[a-zA-Z]+\\[a-zA-Z]+"/>
+            </div>
+            <div>
+                <label for="ścieżkaPlik">Ścieżka do pliku</label>
+                <input type="file" name="ścieżkaPlik" placeholder="" />
+            </div>
+            <div>
+                <label for="adresIPV6">adres IPV6</label>
+                <input type="text" name="adresIPV6" pattern="((([0-9a-fA-F]){1,4})\:){7}([0-9a-fA-F]){1,4}" placeholder="2001:0db8:85a3:0000:0000:8a2e:0370:7334" />
+            </div>
+            <div>
+                <label for="numerTelefonu">numer telefonu</label>
+                <input type="tel" name="numerTelefonu" placeholder="123 456 789" pattern="\d\d\d[-|\ ]?\d\d\d[-\ ]?\d\d\d"/>
+            </div>
+            <div>
+                <label for="kalendarz">kalendarz</label>
+                <input type="date" name="kalendarz"/>
+            </div>
+            <div>
+                <label for="kalendarzLimit">kalendarz (pn-pt)</label>
+                <input type="date" name="kalendarzLimit" min="2022-10-17" max="2022-10-21" />
+            </div>
+            <div>
+                <label for="time12h">czas (12h)</label>
+                <input type="time" name="time12h" min="01:00" max="12:59" id="time12h" />
+
+                <select id="time_AM_PM" name="switch_AM_PM">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+            <div>
+                <label for="time24h">czas (24h)</label>
+                <input type="time" name="time24h" />
+            </div>
+            <div>
+                <label for="colorPicker">kolor</label>
+                <input type="color" name="colorPicker" />
+            </div>
+        </form>
+    </body>
+</html>
