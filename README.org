@@ -1,2 +1,2 @@
 * Interfejsy platform mobilnych
-Repozytorium potrzebne do przedmiotu.
+Repozytorium potrzebne do przedmiotu, każdy folder zawiera wszystkie pliki potrzebne do realizacji wykładów.
