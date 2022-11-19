@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IPM 249087 - lab4</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen" /> -->
+        <script type="text/javascript" href="./js/main.js"></script>
+
+    </head>
+    <body>
+        <!--
+        
+        -->
+
+<script>
+        let dragged;
+        let id;
+        let index;
+        let indexDrop;
+        let list;
+
+        document.addEventListener("dragstart", ({ target }) => {
+            dragged = target;
+            id = target.id;
+            list = target.parentNode.children;
+            for (let i = 0; i < list.length; i += 1) {
+                if (list[i] === dragged) {
+                    index = i;
+                }
+            }
+        });
+
+        document.addEventListener("dragover", (event) => {
+            event.preventDefault();
+        });
+
+        document.addEventListener("drop", ({ target }) => {
+            if (target.className == "dropzone" && target.id !== id) {
+                dragged.remove(dragged);
+                for (let i = 0; i < list.length; i += 1) {
+                    if (list[i] === target) {
+                        indexDrop = i;
+                    }
+                }
+                console.log(index, indexDrop);
+                if (index > indexDrop) {
+                    target.before(dragged);
+                } else {
+                    target.after(dragged);
+                }
+            }
+        });
+    </script>
+
+        <ol>
+            <li id="1" class="dropzone" contenteditable draggable="true"><p>world 1</p></li>
+            <li id="2" class="dropzone" contenteditable draggable="true"><p>world 2</p></li>
+            <li id="3" class="dropzone" contenteditable draggable="true"><p>world 3</p></li>
+        </ol>
+        
+        <!--
+        <style style="display: block" contenteditable>
+          body {
+            background-color: blue;
+          }
+        </style>
+        -->
+    </body>
+</html>
