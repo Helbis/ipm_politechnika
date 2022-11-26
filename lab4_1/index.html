@@ -15,6 +15,7 @@
 
     </head>
     <body>
+      <h1>User management tool</h1>
 
       <form id="newUserData" onsubmit="return addUser(event)">
         <h2>Add new user</h2>
@@ -42,8 +43,20 @@
         <input id="submitBtn" type="submit" value="SUBMIT"/>
       </form>
       
-      <section>
+      <section class="usersList">
         <h2>List of users</h2>
+        <table>
+          <thead>
+            <th class="fname">First name</th>
+            <th class="lname">Last name</th>
+            <th class="email">email</th>
+            <th class="phone">phone</th>
+            <th class="pesel">pesel</th>
+          </thead>
+          <tbody>
+            <td></td>
+          </tbody>
+        </table>
       </section>
 
     </body>
