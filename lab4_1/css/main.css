@@ -68,3 +68,22 @@ input:valid + span::before {
   content: "✓";
   color: green;
 }
+
+#submitBtn, #resetBtn {
+    max-width: 40%;
+}
+
+#submitBtn {
+    background-color: lightblue;
+}
+#submitBtn:hover, #submitBtn:active {
+    color: white;
+    background-color: blue;
+}
+
+#resetBtn {
+    background-color: rgb(255, 128, 128);
+}
+#resetBtn:hover, #resetBtn:active {
+    background-color: red;
+}
