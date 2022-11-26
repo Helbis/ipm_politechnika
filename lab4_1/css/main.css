@@ -1,0 +1,66 @@
+body {
+     display: flex;
+     flex-direction: column;
+     background-color: lightgrey;
+     font-family: sans-serif;
+}
+
+h1 {
+     margin: 2rem auto;
+}
+
+div {
+     display: flex;
+     flex-direction: column;
+     border-radius: 5px;
+}
+div:hover, div:active {
+     background-color: grey;
+}
+
+form {
+     display: grid;
+     text-align: center;
+     gap: 2ch;
+     margin: auto;
+     max-width: 80ch;
+}
+
+form > * {
+     margin: auto;
+}
+
+form > * > * {
+     max-width: 30ch;
+     min-width: 20ch;
+}
+
+input {
+     border-radius: 5px;
+     width: 15rem;
+     height: 1.4rem;
+}
+
+input + span {
+     position: relative;
+}
+
+input + span::before {
+     position: absolute;
+     right: -20px;
+     top: -20px;
+}
+
+input:invalid {
+     border: 2px solid red;
+}
+
+input:invalid + span::before {
+     content: "✖";
+     color: red;
+}
+
+input:valid + span::before {
+     content: "✓";
+     color: green;
+}
