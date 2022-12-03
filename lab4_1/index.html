@@ -18,6 +18,7 @@
       <header><h1>User management tool</h1></header>
       
       <main>
+      <section id="userForm">
       <form id="newUserData" onsubmit="return addUser(event)">
         <h2>Add new user</h2>
         <div class="formItem">
@@ -41,11 +42,14 @@
           <input id="pesel" name="pesel" type="number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>
         </div>
         
+        <div id="btnControls">
         <input id="submitBtn" type="submit" value="SUBMIT"/>
         <input id="resetBtn" type="reset" value="RESET"/>
+        </div>
       </form>
+      </section>
       
-      <section class="usersList">
+      <section id="usersList">
         <h2>List of users</h2>
         <table>
           <thead>
