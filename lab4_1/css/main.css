@@ -1,40 +1,37 @@
+:root {
+    /* dimensions */
+    --header-height: 10vh;
+    --main-height: calc(100vh - var(--header-height));
+    
+    --border-radius: 0.5rem;    
+    /* color theme */
+}
+
 * {
     font-family: sans-serif;
 }
 
-:root{
-    /* dimensions */
-    --header-height: 10vh;
-    
-    /* Color theme */
-}
-
 body{
     background-color: lightgrey;
-    
-    display: grid;
-        
     margin: 0;
     padding: 0;
 }
 
 header {
-    margin: 0;
-    padding: 0;
-    background-color: blue;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
-    height: 10vh;
+    background-color: blue;
+    height: var(--header-height);
 }
 
 main {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: calc(100vh - 10vh);
+    height: var(--main-height);
     
     gap: 1rem;
         
@@ -67,16 +64,14 @@ form#newUserData {
     gap: 2ch;
     margin: auto;
 
-    /*box-shadow: 1rem 1rem 1rem black;*/
-    outline: 2px solid red;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 0.5rem;
 }
 
 div.formItem {
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     gap: 1rem;
     min-height: 2rem;
 }
@@ -85,14 +80,13 @@ div.formItem:hover, div.formItem:active {
 }
 
 div.formItem > input.kbdInput {
-    border-radius: 5px;
+    border-radius: var(--border-radius);
+    border: none;
 
     height: 2rem;
     font-size: 1.25rem;
-    /*outline: 1px solid blue;*/
 }
 input.kbdInput:invalid {
-    outline: 2px solid red;
     color: red;
 }
 
@@ -127,8 +121,6 @@ input.kbdInput:invalid {
 }
 
 #usersList {
-    outline: 2px solid red;
-        
     text-align: center;
     margin: auto;
     min-width: 60%;
