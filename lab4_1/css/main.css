@@ -4,7 +4,14 @@
     --main-height: calc(100vh - var(--header-height));
     
     --border-radius: 0.5rem;    
+
     /* color theme */
+    --bg-main: #333333;
+    --bg-secondary: #363030;
+    --theme-1: #FF9000;
+    --theme-2: #00FF91;
+    --theme-3: #9000FF;
+    --clr-invalid: #FF0019;
 }
 
 * {
@@ -12,7 +19,7 @@
 }
 
 body{
-    background-color: lightgrey;
+    background-color: var(--bg-main);
     margin: 0;
     padding: 0;
 }
@@ -23,7 +30,7 @@ header {
     align-items: center;
     justify-content: center;
     
-    background-color: blue;
+    background-color: var(--bg-secondary);
     height: var(--header-height);
 }
 
@@ -34,8 +41,6 @@ main {
     height: var(--main-height);
     
     gap: 1rem;
-        
-    background-color: grey;
 }
 
 h1 {
@@ -55,6 +60,12 @@ section#userForm{
     width: 20rem;
     margin: auto;
     margin-left: 1rem;
+    
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--theme-1);
+    border-radius: var(--border-radius);
+    
+    box-shadow: 0 0 4rem 1rem var(--theme-1);
 }
 
 form#newUserData {
@@ -72,22 +83,31 @@ div.formItem {
     display: flex;
     flex-direction: column;
     border-radius: var(--border-radius);
+    border: none;
     gap: 1rem;
     min-height: 2rem;
 }
-div.formItem:hover, div.formItem:active {
-    background-color: lightgrey;
-}
 
-div.formItem > input.kbdInput {
+input.kbdInput {
+    border: 1px solid var(--theme-1);
     border-radius: var(--border-radius);
-    border: none;
+    
+    background-color: var(--bg-secondary);
 
     height: 2rem;
     font-size: 1.25rem;
+    color: var(--theme-1);
+        
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+input.kbdInput:hover, input.kbdInput:active {
+    border: 1px solid var(--theme-3);
 }
 input.kbdInput:invalid {
-    color: red;
+    color: var(--clr-invalid);
+    outline: 3px dashed var(--clr-invalid);
+    outline-offset: 0.25rem;
 }
 
 #btnControls {
@@ -102,7 +122,7 @@ input.kbdInput:invalid {
     width: 100%;
     height: 2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
 }
 
 #submitBtn {
