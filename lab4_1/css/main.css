@@ -12,6 +12,10 @@
     --theme-2: #00FF91;
     --theme-3: #9000FF;
     --clr-invalid: #FF0019;
+    --clr-text: white;
+    
+    --btn-submit: var(--theme-2);
+    --btn-submit: 
 }
 
 * {
@@ -45,15 +49,17 @@ main {
 
 h1 {
     font-weight: 200;
-    font-family: sans-serif;
     font-size: 2rem;
-    color: white;
+    color: var(--clr-text);
 }
 h2 {
     font-weight: 180;
-    font-family: sans-serif;
     font-size: 1.5rem;
-    margin: 0.5rem auto;
+    color: var(--clr-text);
+}
+
+h1, h2, label {
+    text-transform: uppercase;
 }
 
 section#userForm{
@@ -65,7 +71,7 @@ section#userForm{
     border: 1px solid var(--theme-1);
     border-radius: var(--border-radius);
     
-    box-shadow: 0 0 4rem 1rem var(--theme-1);
+    color: var(--clr-text);
 }
 
 form#newUserData {
