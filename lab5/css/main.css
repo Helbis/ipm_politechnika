@@ -168,7 +168,7 @@ input.kbdInput:invalid {
 
 #tableControls > .icon {
     color: var(--clr-text);
-    font-size: 1rem;
+    font-size: 2rem;
 }
 #tableControls > .ctrlCheckbox {
     width: 2rem;
@@ -201,4 +201,8 @@ input.kbdInput:invalid {
 #usersList > table > tbody > tr:hover {
     background-color: var(--theme-2);
     color: var(--bg-main);
+}
+
+tr[marked]{
+    background-color: red;
 }

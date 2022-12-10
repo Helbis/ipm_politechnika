@@ -1,13 +1,14 @@
-const trList = document.getElementsByTagName("tr");
-
 function update(){
+	const trList = document.getElementsByTagName("tr");
 	// On table change, update the onclick event listener
-	for (const el of trList){
-		el.addEventListener("click", markRow);
+
+	for (const el in trList){
+		el.addEventListener("click", function (){
+			el.toggleAttribute("marked");
+			console.log("marked");
+		});
 	}
 }
 
-function markRow(){
-	// mark row for edition
-
-}
+update();
+console.log("hey");
