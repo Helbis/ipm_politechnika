@@ -15,7 +15,7 @@
     --clr-text: white;
     
     --btn-submit: var(--theme-2);
-    --btn-submit: 
+    /*--btn-submit: */
 }
 
 * {
@@ -146,6 +146,29 @@ input.kbdInput:invalid {
     background-color: red;
 }
 
+#usersListHeader{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    justify-content: center;
+    border: 1px solid blue;
+}
+
+#tableControls{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 0;
+    height: 100%;
+    background-color: red;
+}
+
+#tableControls > .ctrlCheckbox {
+    width: 2rem;
+    height: 2rem;
+}
+
 #usersList {
     text-align: center;
     margin: auto;
@@ -157,11 +180,19 @@ input.kbdInput:invalid {
 
 #usersList > table {
     width: 100%;
-    background-color: blue;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--theme-1);
+    border-radius: var(--border-radius);
+    color: var(--clr-text);
 }
 #usersList > table > thead {
-    background-color: darkblue;
+    background-color: var(--bg-secondary);
+    text-transform: uppercase;
 }
-#usersList > table > tbody > tr:nth-child(even) {
-    background-color: white;
+#usersList > table > tbody > tr:nth-child(odd) {
+    background-color: var(--bg-main);
+}
+#usersList > table > tbody > tr:hover {
+    background-color: var(--theme-2);
+    color: var(--bg-main);
 }
