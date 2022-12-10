@@ -152,7 +152,7 @@ input.kbdInput:invalid {
     width: 100%;
     
     justify-content: center;
-    border: 1px solid blue;
+    align-items: center;
 }
 
 #tableControls{
@@ -160,10 +160,16 @@ input.kbdInput:invalid {
     flex-direction: row;
     margin-left: auto;
     margin-right: 0;
+    justify-content: center;
+    align-items: center;
+
     height: 100%;
-    background-color: red;
 }
 
+#tableControls > .icon {
+    color: var(--clr-text);
+    font-size: 1rem;
+}
 #tableControls > .ctrlCheckbox {
     width: 2rem;
     height: 2rem;
