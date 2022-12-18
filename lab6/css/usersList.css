@@ -1,7 +1,8 @@
 #search{
   font-size: 1rem;
+	color: var(--theme-1);
 
-	background-color: transparent;
+	background-color: var(--bg-secondary);
   color: var(--clr-text);
 
   margin: 0;
