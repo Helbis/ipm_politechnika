@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>IPM 249087 - lab5</title>
+    <meta name="description" content="Simple form accepting user data and saving it using indexedDB">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./css/main.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./css/usersList.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" href="./js/main.js" defer></script>
+    <script type="text/javascript" href="./js/tableControls.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>User management tool</h1>
+    </header>
+    <main>
+        <section id="userForm">
+            <form id="newUserData" onsubmit="return addUser(event)">
+                <h2>Add new user</h2>
+                <div class="formItem">
+                    <label for="fname">First name</label>
+                    <input class="kbdInput" id="fname" name="fname" type="text" />
+                </div>
+                <div class="formItem">
+                    <label for="lname">Last name</label>
+                    <input class="kbdInput" id="lname" name="lname" type="text" />
+                </div>
+                <div class="formItem">
+                    <label for="email">Email</label>
+                    <input class="kbdInput" id="email" name="email" type="email" />
+                </div>
+                <div class="formItem">
+                    <label for="tel">Phone number</label>
+                    <input class="kbdInput" id="tel" name="tel" type="tel" />
+                </div>
+                <div class="formItem">
+                    <label for="pesel">PESEL</label>
+                    <input class="kbdInput" id="pesel" name="pesel" type="number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+                </div>
+
+                <div id="btnControls">
+                    <input id="submitBtn" type="submit" value="SUBMIT" />
+                    <input id="resetBtn" type="reset" value="RESET" />
+                </div>
+            </form>
+        </section>
+
+        <section id="usersList">
+            <div id="usersListHeader">
+                <h2>List of users</h2>
+                <form id="tableControls">
+                    <input id="search" name="search" type="search" placeholder="Search . . .">
+                    <!--<label class="icon" for="mark">&#9974;</label>
+                    <input class="ctrlCheckbox" name="mark" type="checkbox" />
+                    <label class="icon" for="delete">&#9949;</label>
+                    <input class="ctrlCheckbox" name="delete" type="checkbox" />
+                    <label class="icon" for="update">&#8634;</label>
+                    <input class="ctrlCheckbox" name="update" type="checkbox" />-->
+                </form>
+            </div>
+
+            <table>
+                <thead>
+                    <th class="fname">First name</th>
+                    <th class="lname">Last name</th>
+                    <th class="email">email</th>
+                    <th class="phone">phone</th>
+                    <th class="pesel">pesel</th>
+                </thead>
+                <tbody>
+                    <template id="tr-template">
+                        <tr>
+                            <td class="tr-fname">john</td>
+                            <td class="tr-lname">doe</td>
+                            <td class="tr-email">john@doe.org</td>
+                            <td class="tr-phone">420123690</td>
+                            <td class="tr-pesel">99101223476</td>
+                        </tr>
+                    </template>
+                    <tr>
+                        <td>john</td>
+                        <td>doe</td>
+                        <td>john@doe.org</td>
+                        <td>420123690</td>
+                        <td>99101223476</td>
+                    </tr>
+                    <tr>
+                        <td>john</td>
+                        <td>doe</td>
+                        <td>john@doe.org</td>
+                        <td>420123690</td>
+                        <td>99101223476</td>
+                    </tr>
+                    <tr>
+                        <td>john</td>
+                        <td>doe</td>
+                        <td>john@doe.org</td>
+                        <td>420123690</td>
+                        <td>99101223476</td>
+                    </tr>
+                    <tr>
+                        <td>john</td>
+                        <td>doe</td>
+                        <td>john@doe.org</td>
+                        <td>420123690</td>
+                        <td>99101223476</td>
+                    </tr>
+                    <tr>
+                        <td>john</td>
+                        <td>doe</td>
+                        <td>john@doe.org</td>
+                        <td>420123690</td>
+                        <td>99101223476</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+#search{
+  font-size: 1rem;
+
+	background-color: transparent;
+  color: var(--clr-text);
+
+  margin: 0;
+  padding: 0.75rem 0.5rem;
+
+	width: 15rem;
+
+  border: 1px solid var(--clr-text);
+  border-radius: var(--border-radius);
+}
+#search:hover,
+#search:active,
+#search:focus-visible {
+	border: 1px solid var(--theme-1);
+}
+
+#usersListHeader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#tableControls {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 0;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+#tableControls > .icon {
+  color: var(--clr-text);
+  font-size: 2rem;
+}
+#tableControls > .ctrlCheckbox {
+  width: 2rem;
+  height: 2rem;
+}
+
+#usersList {
+  text-align: center;
+  margin: auto;
+  min-width: 60%;
+  max-width: 100%;
+
+  height: 100%;
+}
+
+#usersList > table {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--theme-1);
+  border-radius: var(--border-radius);
+  color: var(--clr-text);
+}
+#usersList > table > thead {
+  background-color: var(--bg-secondary);
+  text-transform: uppercase;
+}
+#usersList > table > tbody > tr:nth-child(odd) {
+  background-color: var(--bg-main);
+}
+#usersList > table > tbody > tr:hover {
+  background-color: var(--theme-2);
+  color: var(--bg-main);
+}
+
+tr[marked] {
+  background-color: red;
+}
