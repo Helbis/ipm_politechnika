@@ -1,9 +1,9 @@
 #search{
   font-size: 1rem;
 	color: var(--theme-1);
+	letter-spacing: 0.1rem;
 
 	background-color: var(--bg-secondary);
-  color: var(--clr-text);
 
   margin: 0;
   padding: 0.75rem 0.5rem;
